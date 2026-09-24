@@ -1,0 +1,780 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   IRFAN & IRFAN — GLOBAL DESIGN SYSTEM
+   ========================================================= */
+
+:root {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Brand */
+  --brand-burgundy: #9d352d;
+  --brand-red: #a23830;
+  --brand-dark: #74241f;
+  --brand-darker: #541915;
+  --brand-deepest: #32110f;
+
+  --brand-gold: #d4af4c;
+  --brand-gold-light: #e2c56f;
+  --brand-gold-dark: #957126;
+
+  /* Neutrals */
+  --brand-cream: #f8f4ed;
+  --brand-ivory: #fffdf9;
+  --brand-white: #ffffff;
+  --brand-ink: #211816;
+
+  /* Layout */
+  --header-height: 112px;
+
+  /*
+   * Mobile bottom navigation.
+   * Keep this synced with Navbar.tsx.
+   */
+  --mobile-bottom-nav-height: 64px;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * Critical:
+ * prevents components from creating horizontal scrolling.
+ */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  /*
+   * clip is safer than hidden for fixed navigation.
+   * Fallback is provided below.
+   */
+  overflow-x: hidden;
+  overflow-x: clip;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* =========================================================
+   LENIS
+   ========================================================= */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  font-family: var(--font-body);
+
+  background-color: var(--brand-ivory);
+  color: var(--brand-ink);
+
+  overflow-x: hidden;
+  overflow-x: clip;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*
+   * Prevent browser text enlargement from damaging
+   * mobile layouts.
+   */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* =========================================================
+   NEXT.JS ROOT / MAIN
+   ========================================================= */
+
+body > div {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/*
+ * Prevent page sections from forcing viewport overflow.
+ */
+main,
+header,
+footer,
+section,
+article,
+aside,
+nav {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* =========================================================
+   GENERAL ELEMENTS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/*
+ * Embedded content should never push mobile width.
+ */
+iframe,
+embed,
+object {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =========================================================
+   TEXT RESPONSIVENESS
+   ========================================================= */
+
+p,
+li,
+blockquote {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/*
+ * Do not globally break normal navigation text character
+ * by character. Long technical strings can still wrap.
+ */
+a,
+button {
+  overflow-wrap: normal;
+}
+
+/* =========================================================
+   FORM RESPONSIVENESS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*
+ * iOS Safari zooms inputs when font-size is below 16px.
+ */
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   TABLE RESPONSIVENESS
+   ========================================================= */
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .brand-gradient {
+    background:
+      linear-gradient(
+        135deg,
+        var(--brand-burgundy) 0%,
+        var(--brand-dark) 100%
+      );
+  }
+
+  .brand-dark-gradient {
+    background:
+      linear-gradient(
+        135deg,
+        var(--brand-dark) 0%,
+        var(--brand-deepest) 100%
+      );
+  }
+
+  .gold-gradient {
+    background:
+      linear-gradient(
+        90deg,
+        #b99135 0%,
+        #e2c56f 50%,
+        #b99135 100%
+      );
+  }
+
+  .text-gold-gradient {
+    background:
+      linear-gradient(
+        90deg,
+        #b99135 0%,
+        #e2c56f 50%,
+        #b99135 100%
+      );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grain-texture {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+
+    background-size: 200px 200px;
+  }
+
+  /*
+   * Useful when a component is causing overflow.
+   */
+  .safe-width {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /*
+   * iPhone safe-area helpers.
+   */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* =========================================================
+   REUSABLE COMPONENTS
+   ========================================================= */
+
+@layer components {
+  /* -------------------------------------------------------
+     CONTAINER
+     ------------------------------------------------------- */
+
+  .page-container {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16;
+
+    min-width: 0;
+  }
+
+  /* -------------------------------------------------------
+     SECTION SPACING
+     ------------------------------------------------------- */
+
+  .section-padding {
+    @apply py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 2xl:py-36;
+  }
+
+  /* -------------------------------------------------------
+     TYPOGRAPHY
+     ------------------------------------------------------- */
+
+  .heading-1 {
+    @apply font-display font-bold tracking-tight;
+
+    font-size: clamp(2.4rem, 8vw, 6rem);
+    line-height: 0.98;
+  }
+
+  .heading-2 {
+    @apply font-display font-bold tracking-tight;
+
+    font-size: clamp(2rem, 6vw, 3.75rem);
+    line-height: 1.05;
+  }
+
+  .heading-3 {
+    @apply font-display font-semibold tracking-tight;
+
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .heading-4 {
+    @apply font-display font-semibold;
+
+    font-size: clamp(1.4rem, 4vw, 1.875rem);
+    line-height: 1.15;
+  }
+
+  .body-large {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.75;
+  }
+
+  .body-regular {
+    font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+    line-height: 1.75;
+  }
+
+  /* -------------------------------------------------------
+     GOLD EYEBROW / LABEL
+     ------------------------------------------------------- */
+
+  .section-label {
+    @apply mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase text-gold-600;
+
+    max-width: 100%;
+    letter-spacing: 0.18em;
+  }
+
+  .section-label::before {
+    content: "";
+    display: block;
+    width: 34px;
+    min-width: 34px;
+    height: 1px;
+    background: var(--brand-gold);
+  }
+
+  /* =======================================================
+     PRIMARY BUTTON
+     ======================================================= */
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+      bg-gold-500
+      px-8
+      py-4
+      text-sm
+      font-semibold
+      uppercase
+      tracking-[0.08em]
+      text-brand-deepest
+      transition-all
+      duration-300;
+
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--brand-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(116, 36, 31, 0.18);
+  }
+
+  /* =======================================================
+     SECONDARY BUTTON
+     ======================================================= */
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+      border
+      border-gold-500
+      bg-transparent
+      px-8
+      py-4
+      text-sm
+      font-semibold
+      uppercase
+      tracking-[0.08em]
+      text-gold-500
+      transition-all
+      duration-300;
+
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--brand-gold);
+    color: var(--brand-deepest);
+    transform: translateY(-2px);
+  }
+
+  /* =======================================================
+     CARDS
+     ======================================================= */
+
+  .card-hover {
+    @apply transition-all duration-500;
+
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 24px 60px rgba(84, 25, 21, 0.14);
+  }
+
+  /* -------------------------------------------------------
+     LIGHT SECTION
+     ------------------------------------------------------- */
+
+  .section-light {
+    background-color: var(--brand-ivory);
+    color: var(--brand-ink);
+  }
+
+  /* -------------------------------------------------------
+     CREAM SECTION
+     ------------------------------------------------------- */
+
+  .section-cream {
+    background-color: var(--brand-cream);
+    color: var(--brand-ink);
+  }
+
+  /* -------------------------------------------------------
+     BURGUNDY SECTION
+     ------------------------------------------------------- */
+
+  .section-burgundy {
+    background-color: var(--brand-burgundy);
+    color: white;
+  }
+
+  /* -------------------------------------------------------
+     DARK BURGUNDY SECTION
+     ------------------------------------------------------- */
+
+  .section-dark {
+    background-color: var(--brand-deepest);
+    color: white;
+  }
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-deepest);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-gold);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-gold-light);
+}
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
+
+::selection {
+  background-color: var(--brand-gold);
+  color: var(--brand-deepest);
+}
+
+/* =========================================================
+   PAGE TRANSITION
+   ========================================================= */
+
+.page-transition {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  opacity: 1;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   FIXED MOBILE BOTTOM NAVIGATION SUPPORT
+   ========================================================= */
+
+/*
+ * Navbar.tsx bottom nav is 64px tall.
+ *
+ * This padding makes sure Footer / CTA / Contact content
+ * does not disappear underneath the fixed navigation.
+ */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom:
+      calc(
+        var(--mobile-bottom-nav-height) +
+        env(safe-area-inset-bottom)
+      );
+  }
+}
+
+/*
+ * Desktop does not have bottom navigation.
+ */
+@media (min-width: 1024px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  :root {
+    --header-height: 82px;
+  }
+
+  /*
+   * Fixed/sticky elements should never exceed viewport.
+   */
+  .page-container {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 74px;
+  }
+
+  .heading-1,
+  .heading-2,
+  .heading-3,
+  .heading-4 {
+    text-wrap: balance;
+  }
+
+  /*
+   * Buttons become easier to use without forcing every
+   * button on the site to full width.
+   */
+  .btn-primary,
+  .btn-secondary {
+    min-height: 48px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /*
+   * Disable large hover movement on touch screens.
+   */
+  .card-hover:hover {
+    transform: none;
+  }
+
+  /*
+   * Keep long labels under control.
+   */
+  .section-label {
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+
+  .section-label::before {
+    width: 26px;
+    min-width: 26px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   iPhone SE / 320px / 360px
+   ========================================================= */
+
+@media (max-width: 374px) {
+  .page-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .heading-1 {
+    font-size: clamp(2.1rem, 11vw, 2.65rem);
+  }
+
+  .heading-2 {
+    font-size: clamp(1.8rem, 9vw, 2.25rem);
+  }
+
+  .heading-3 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+  }
+
+  .heading-4 {
+    font-size: 1.35rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICE IMPROVEMENTS
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  /*
+   * Hover transforms can look stuck on iOS/Android.
+   */
+  .card-hover:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
