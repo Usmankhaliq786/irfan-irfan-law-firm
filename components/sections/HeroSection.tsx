@@ -85,7 +85,7 @@ export default function HeroSection() {
           poster="/images/hero-law.jpg"
         >
           <source
-            src="/videos/Hero-video1.mp4"
+            src="/videos/Hero-Video1.mp4"
             type="video/mp4"
           />
 
