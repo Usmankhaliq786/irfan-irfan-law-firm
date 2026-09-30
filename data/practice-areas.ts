@@ -84,7 +84,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "banking-finance",
-    title: "Banking & Finance",
+    title: "Banking and Finance",
 
     shortDescription:
       "",
@@ -159,7 +159,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "corporate-business-law",
-    title: "Corporate & Business Law",
+    title: "Corporate and Business Law",
 
     shortDescription:
       "",
@@ -207,7 +207,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "cyber-law-ecommerce",
-    title: "Cyber Law & E-Commerce",
+    title: "Cyber Law and E-Commerce",
 
     shortDescription:
       "",
@@ -341,7 +341,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "patent-design-law",
-    title: "Patent & Design Law",
+    title: "Patent and Design Law",
 
     shortDescription:
       "",
@@ -445,7 +445,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "environmental-regulatory-law",
-    title: "Environmental & Regulatory Law",
+    title: "Environmental and Regulatory Law",
 
     shortDescription:
       "",
@@ -475,7 +475,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "international-trade-cross-border",
-    title: "International Trade & Cross Border Operations",
+    title: "International Trade and Cross Border Operations",
 
     shortDescription:
       "",
@@ -509,7 +509,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "litigation-enforcement",
-    title: "Litigation & Enforcement",
+    title: "Litigation and Enforcement",
 
     shortDescription:
       "",
@@ -547,7 +547,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "mergers-acquisitions-joint-ventures",
-    title: "Mergers, Acquisitions & Joint Ventures",
+    title: "Mergers, Acquisitions and Joint Ventures",
 
     shortDescription:
       "",
@@ -653,7 +653,7 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "trademark-copyright",
-    title: "Trademark & Copyright",
+    title: "Trademark and Copyright",
 
     shortDescription:
       "",

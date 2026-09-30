@@ -345,17 +345,16 @@ export default function AboutSection() {
 
               <blockquote>
                 <p
-                  className="
-                    font-display
-                    text-[20px]
-                    font-normal
-                    leading-[1.7]
-                    text-white/95
-                    sm:text-[22px]
-                    md:text-[24px]
+                 className="
+                    mt-5
+                    text-[16px]
+                    font-light
+                    leading-[1.8]
+                    text-white/75
+                    md:text-[17px]
                   "
                 >
-                  At Irfan &amp; Irfan our journey has always been guided by
+                  At Irfan and Irfan our journey has always been guided by
                   integrity and legal excellence with an unwavering commitment
                   to the pursuit of justice.
                 </p>

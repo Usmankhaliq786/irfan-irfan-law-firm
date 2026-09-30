@@ -143,7 +143,7 @@ export default function Footer() {
               className="
                 mt-7
                 max-w-[450px]
-                text-[18px]
+                text-[16px]
                 leading-[1.9]
                 text-white/55
               "

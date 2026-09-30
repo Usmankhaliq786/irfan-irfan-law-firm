@@ -270,7 +270,7 @@ export default function AboutPage() {
 
             {/* Right */}
 
-            <div className="about-reveal space-y-6 text-[18px] leading-[1.95] text-[#604b45]">
+            <div className="about-reveal space-y-6 text-[16px] leading-[1.95] text-[#604b45]">
 
               <p>
                 Established in 1985, Irfan & Irfan is legal advisor to many successful companies, corporations, authorities, entrepreneurs, business families and individuals. Our diverse practice areas cover and cater for our clients’ every legal need, be it personal or business related. Our client oriented approach and an effort to go beyond the obvious has over the years helped us cement relationships with clients besides adding illustrious names to our client base.
@@ -326,7 +326,7 @@ export default function AboutPage() {
                 {missionPoints.map((item, index) => (
                   <p
                     key={index}
-                    className="text-[13px] leading-[1.85] text-[#604b45]"
+                    className="text-[14px] leading-[1.85] text-[#604b45] sm:text-[15px] lg:text-[16px]"
                   >
                     {item}
                   </p>
@@ -346,7 +346,7 @@ export default function AboutPage() {
                 {visionPoints.map((item, index) => (
                   <p
                     key={index}
-                    className="text-[13px] leading-[1.85] text-[#604b45]"
+                    className="text-[14px] leading-[1.85] text-[#604b45] sm:text-[15px] lg:text-[16px]"
                   >
                     {item}
                   </p>
@@ -415,8 +415,7 @@ export default function AboutPage() {
                   <h3 className="font-display text-[28px] text-white">
                     {value.title}
                   </h3>
-
-                  <p className="mt-5 text-[13px] leading-[1.8] text-white/65 transition-colors group-hover:text-white/90">
+                    <p className="mt-5 text-[14px] leading-[1.8] text-white/65 transition-colors group-hover:text-white/90 sm:text-[15px] lg:text-[16px]">
                     {value.description}
                   </p>
                 </div>
@@ -533,7 +532,7 @@ export default function AboutPage() {
                   </span>
                 </h3>
 
-                <div className="mt-8 space-y-5 text-[13px] leading-[1.9] text-white/75 md:text-[14px]">
+                <div className="mt-8 space-y-5 text-[14px] leading-[1.9] text-white/75 sm:text-[15px] lg:text-[16px]">
 
                   <p>
                     Mr. Justice Farrukh Irfan Khan is currently one of our
@@ -565,7 +564,7 @@ export default function AboutPage() {
                 {/* Founder Statement */}
 
                 <div className="mt-9">
-                  <p className="font-display text-[18px] italic leading-[1.6] text-white/90">
+                  <p className="font-display text-[14px] italic leading-[1.7] text-white/90 sm:text-[15px] lg:text-[16px]">
                     A legacy founded on integrity justice and professional
                     excellence.
                   </p>
@@ -628,8 +627,8 @@ export default function AboutPage() {
               </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-[620px] text-[14px] leading-[1.9] text-white/75">
-              From its establishment in 1985 Irfan &amp; Irfan has continued
+            <p className="mx-auto mt-6 max-w-[620px] text-[14px] leading-[1.9] text-white/75 sm:text-[15px] lg:text-[16px]">
+              From its establishment in 1985 Irfan and Irfan has continued
               to develop its practice while serving clients across a broad
               range of legal matters.
             </p>
@@ -674,7 +673,7 @@ export default function AboutPage() {
                         {item.title}
                       </h3>
 
-                      <p className="mt-4 max-w-[380px] text-[13px] leading-[1.8] text-white/70">
+                      <p className="mt-4 max-w-[380px] text-[14px] leading-[1.8] text-white/70 sm:text-[15px] lg:text-[16px]">
                         {item.text}
                       </p>
                     </div>
@@ -695,7 +694,7 @@ export default function AboutPage() {
                           {item.title}
                         </h3>
 
-                        <p className="mt-4 text-[13px] leading-[1.8] text-white/70">
+                        <p className="mt-4 text-[14px] leading-[1.8] text-white/70 sm:text-[15px] lg:text-[16px]">
                           {item.text}
                         </p>
                       </div>

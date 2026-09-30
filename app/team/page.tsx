@@ -113,34 +113,7 @@ export default function TeamPage() {
           INTRODUCTION
       ====================================================== */}
 
-      <section className="bg-[#f8f4ed] py-16 md:py-20 lg:py-24">
-        <div className="page-container">
-          <div className="team-reveal grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-20">
-
-            <div>
-              <h2 className="font-display text-[39px] leading-[1.08] tracking-[-0.02em] text-[#32110f] sm:text-[48px] lg:text-[58px]">
-                Experience Across
-
-                <span className="block text-[#9d352d]">
-                  Legal Disciplines.
-                </span>
-              </h2>
-            </div>
-
-            <div>
-              <p className="max-w-[650px] text-[14px] leading-[1.95] text-[#604b45]">
-                Our lawyers work across a broad range of legal disciplines and
-                bring together experience in advisory transactional regulatory
-                and dispute-related matters.
-              </p>
-
-              <p className="mt-7 font-display text-[17px] leading-[1.55] text-[#32110f]">
-                Professional experience. Client-focused legal counsel.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* =====================================================
           LAWYERS
