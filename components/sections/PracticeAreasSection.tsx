@@ -205,7 +205,7 @@ export default function PracticeAreasSection() {
               text-[#9d352d]
             "
           >
-            <span
+            {/* <span
               ref={eyebrowRuleRef}
               className="
                 h-px
@@ -213,11 +213,8 @@ export default function PracticeAreasSection() {
                 origin-right
                 bg-[#d4af4c]
               "
-            />
+            /> */}
 
-            <span>Our Expertise</span>
-
-            <span className="h-px w-10 bg-[#d4af4c]" />
           </div>
 
           <h2
@@ -239,22 +236,6 @@ export default function PracticeAreasSection() {
               Areas
             </span>
           </h2>
-
-          <p
-            className="
-              mx-auto
-              mt-5
-              max-w-[750px]
-              text-[14px]
-              leading-[1.9]
-              text-[#604b45]
-              md:text-[15px]
-            "
-          >
-            Irfan &amp; Irfan provides comprehensive legal counsel across
-            diverse sectors, supporting businesses, institutions and
-            individuals in complex legal and commercial matters.
-          </p>
         </div>
 
         {/* =====================================================
@@ -376,7 +357,7 @@ export default function PracticeAreasSection() {
             md:mt-14
           "
         >
-          <p
+          {/* <p
             className="
               mb-6
               max-w-[570px]
@@ -387,7 +368,7 @@ export default function PracticeAreasSection() {
           >
             Explore our practice areas to learn more about the legal services
             and sector-focused counsel provided by Irfan &amp; Irfan.
-          </p>
+          </p> */}
 
           <Link
             href="/practice-areas"

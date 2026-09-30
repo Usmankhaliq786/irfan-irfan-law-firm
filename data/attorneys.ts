@@ -208,7 +208,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Qazil-Bash.png",
 
     admissionYear: "1993",
 
@@ -251,7 +251,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Mirza-Saqib.png",
 
     admissionYear: "2007",
 
@@ -339,7 +339,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Tariq-bashir.png",
 
     admissionYear: "1996",
 
@@ -549,7 +549,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Mamon-Sattar.png",
 
     admissionYear: "2023",
 
@@ -628,7 +628,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Mahnor.png",
 
     admissionYear: "2021",
 
@@ -665,7 +665,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Nida-Izhar.png",
 
     admissionYear: "2022",
 
@@ -701,7 +701,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/TayyabaJawadSyed.png",
 
     admissionYear: "2018",
 
@@ -841,7 +841,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/GhanaSajid.png",
 
     admissionYear: "2023",
 
@@ -967,7 +967,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Anika.png",
 
     admissionYear: "2025",
 
@@ -998,7 +998,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Abeer-mansoor.png",
 
     admissionYear: "In Process",
 
@@ -1029,7 +1029,7 @@ export const attorneys: Attorney[] = [
     keyCases: [],
     email: "",
     phone: "",
-    image: "",
+    image: "/lawyers/Musa-Chitta.png",
 
     admissionYear: "In Process",
 

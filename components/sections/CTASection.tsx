@@ -16,7 +16,7 @@ const legal500Quotes = [
     source: "Legal 500",
   },
   {
-    text: "Hasan Irfan Khan brings over 30 years of experience, including acting before the Superior Courts in Pakistan.",
+    text: "Hasan Irfan Khan brings over 30 years of experience including acting before the Superior Courts in Pakistan.",
     source: "Legal 500",
   },
 ];
@@ -64,7 +64,7 @@ export default function CTASection() {
           "
         >
           {/* =====================================================
-              DECORATIVE LEGAL 500
+              DECORATIVE LEGAL 500 BACKGROUND TEXT
           ====================================================== */}
 
           <div
@@ -96,7 +96,6 @@ export default function CTASection() {
               className="
                 block
                 text-[90px]
-
                 sm:text-[120px]
                 md:text-[150px]
                 lg:text-[185px]
@@ -130,38 +129,6 @@ export default function CTASection() {
           </div>
 
           {/* =====================================================
-              DECORATIVE CIRCLES
-          ====================================================== */}
-
-          <div
-            aria-hidden="true"
-            className="
-              absolute
-              -bottom-28
-              -left-28
-              h-72
-              w-72
-              rounded-full
-              border
-              border-[#d4af4c]/10
-            "
-          />
-
-          <div
-            aria-hidden="true"
-            className="
-              absolute
-              -bottom-16
-              -left-16
-              h-52
-              w-52
-              rounded-full
-              border
-              border-[#d4af4c]/10
-            "
-          />
-
-          {/* =====================================================
               CONTENT
           ====================================================== */}
 
@@ -171,9 +138,6 @@ export default function CTASection() {
             <div
               className="
                 mb-8
-                flex
-                items-center
-                gap-4
                 text-[10px]
                 font-semibold
                 uppercase
@@ -181,9 +145,6 @@ export default function CTASection() {
                 text-[#e4c76d]
               "
             >
-              <span className="h-px w-10 bg-[#d4af4c]" />
-
-              Legal Consultation
             </div>
 
             {/* =================================================
@@ -212,15 +173,15 @@ export default function CTASection() {
                     tracking-[-0.025em]
                     text-white
 
-                    sm:text-[50px]
-                    md:text-[60px]
-                    lg:text-[70px]
+                    sm:text-[30px]
+                    md:text-[40px]
+                    lg:text-[50px]
                   "
                 >
-                  Need Experienced
+                  Your Case. Your Rights.
 
-                  <span className="block text-[#e4c76d]">
-                    Legal Counsel?
+                    <span className="block text-[#e4c76d]">
+                    Your Strongest Legal Position.
                   </span>
                 </h2>
 
@@ -228,16 +189,15 @@ export default function CTASection() {
                   className="
                     mt-7
                     max-w-[650px]
-                    text-[14px]
-                    leading-[1.9]
-                    text-white/70
+                    text-[16px]
+                    leading-[1.85]
+                    text-white/75
 
-                    md:text-[15px]
+                    sm:text-[17px]
+                    md:text-[18px]
                   "
                 >
-                  Speak with Irfan &amp; Irfan Attorneys at Law about your legal
-                  requirements. Our team provides practical, strategic and
-                  client-focused legal counsel across a broad range of matters.
+                  Navigate complex legal challenges with confidence through strategic counsel, meticulous legal guidance and dedicated representation. Our team is committed to understanding your circumstances, protecting your interests and pursuing practical, well-informed solutions with professionalism and integrity
                 </p>
               </div>
 
@@ -292,8 +252,6 @@ export default function CTASection() {
             <div
               className="
                 mt-12
-                border-y
-                border-white/15
                 py-8
 
                 md:mt-14
@@ -305,12 +263,12 @@ export default function CTASection() {
                   grid
                   gap-6
 
-                  md:grid-cols-[auto_1fr_auto]
+                  md:grid-cols-[auto_1fr]
                   md:items-center
                   md:gap-8
                 "
               >
-                {/* Quote Icon */}
+                {/* Quote Icon - No Border */}
 
                 <div
                   className="
@@ -320,23 +278,21 @@ export default function CTASection() {
                     shrink-0
                     items-center
                     justify-center
-                    border
-                    border-[#d4af4c]/35
                   "
                 >
-                  <Quote
-                    size={25}
+                  {/* <Quote
+                    size={29}
                     strokeWidth={1.2}
                     className="text-[#d4af4c]"
-                  />
+                  /> */}
                 </div>
 
                 {/* Changing Quote */}
 
                 <div
                   className="
-                    min-h-[100px]
                     flex
+                    min-h-[100px]
                     items-center
 
                     sm:min-h-[90px]
@@ -387,36 +343,6 @@ export default function CTASection() {
                     </p>
                   </div>
                 </div>
-
-                {/* Quote Counter */}
-
-                <div
-                  className="
-                    hidden
-                    items-center
-                    gap-2
-
-                    md:flex
-                  "
-                >
-                  {legal500Quotes.map((_, index) => (
-                    <span
-                      key={index}
-                      className={`
-                        block
-                        h-[2px]
-                        transition-all
-                        duration-500
-
-                        ${
-                          activeQuote === index
-                            ? "w-8 bg-[#d4af4c]"
-                            : "w-4 bg-white/20"
-                        }
-                      `}
-                    />
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -424,176 +350,6 @@ export default function CTASection() {
                 BOTTOM INFORMATION
             ================================================== */}
 
-            <div
-              className="
-                mt-10
-                grid
-                pt-2
-
-                sm:grid-cols-2
-
-                lg:mt-12
-                lg:grid-cols-3
-              "
-            >
-              {/* ESTABLISHED */}
-
-              <div
-                className="
-                  flex
-                  gap-4
-                  border-b
-                  border-white/10
-                  py-6
-
-                  sm:border-r
-                  sm:pr-6
-
-                  lg:border-b-0
-                  lg:py-2
-                "
-              >
-                <Scale
-                  size={21}
-                  strokeWidth={1.4}
-                  className="
-                    mt-1
-                    flex-shrink-0
-                    text-[#d4af4c]
-                  "
-                />
-
-                <div>
-                  <p
-                    className="
-                      mb-1
-                      text-[10px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.17em]
-                      text-white/45
-                    "
-                  >
-                    Established
-                  </p>
-
-                  <p className="font-display text-[21px] text-white">
-                    Since 1985
-                  </p>
-                </div>
-              </div>
-
-              {/* OFFICES */}
-
-              <div
-                className="
-                  flex
-                  gap-4
-                  border-b
-                  border-white/10
-                  py-6
-
-                  sm:pl-7
-
-                  lg:border-b-0
-                  lg:border-r
-                  lg:px-7
-                  lg:py-2
-                "
-              >
-                <MapPin
-                  size={21}
-                  strokeWidth={1.4}
-                  className="
-                    mt-1
-                    flex-shrink-0
-                    text-[#d4af4c]
-                  "
-                />
-
-                <div>
-                  <p
-                    className="
-                      mb-1
-                      text-[10px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.17em]
-                      text-white/45
-                    "
-                  >
-                    Offices
-                  </p>
-
-                  <p
-                    className="
-                      font-display
-                      text-[18px]
-                      leading-relaxed
-                      text-white
-                    "
-                  >
-                    Lahore · Karachi · Islamabad
-                  </p>
-                </div>
-              </div>
-
-              {/* CONTACT */}
-
-              <div
-                className="
-                  flex
-                  gap-4
-                  py-6
-
-                  sm:col-span-2
-
-                  lg:col-span-1
-                  lg:pl-7
-                  lg:py-2
-                "
-              >
-                <Mail
-                  size={21}
-                  strokeWidth={1.4}
-                  className="
-                    mt-1
-                    flex-shrink-0
-                    text-[#d4af4c]
-                  "
-                />
-
-                <div>
-                  <p
-                    className="
-                      mb-1
-                      text-[10px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.17em]
-                      text-white/45
-                    "
-                  >
-                    Get In Touch
-                  </p>
-
-                  <Link
-                    href="/contact"
-                    className="
-                      font-display
-                      text-[20px]
-                      text-white
-                      transition-colors
-                      duration-300
-
-                      hover:text-[#d4af4c]
-                    "
-                  >
-                    Contact Our Lawyers
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

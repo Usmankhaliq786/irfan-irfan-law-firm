@@ -23,7 +23,7 @@ const navigation = [
   { name: "About Us", href: "/about" },
   { name: "Practice Areas", href: "/practice-areas" },
   { name: "Our Lawyers", href: "/team" },
-  { name: "News", href: "/cases" },
+  { name: "Insights", href: "/cases" },
   { name: "Contacts", href: "/contact" },
 ];
 

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Quote } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,22 +11,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const partners = [
   {
-    number: "01",
     name: "Hasan Irfan Khan",
     role: "Partner — Advocate Supreme Court",
     image: "/lawyers/hassan-irfan.png",
     profile: "/team/hasan-irfan-khan",
     message:
-      "Our approach to law is rooted in experience, precision, and a deep understanding of our clients’ objectives. At Irfan & Irfan, we strive to provide practical, strategic, and effective legal solutions across complex matters. Every case presents its own challenges, and our responsibility is to navigate them with diligence, discretion, and professional integrity. We remain committed to delivering counsel that protects our clients’ interests and supports their long-term goals.",
+      "Our approach to law is rooted in experience precision and a deep understanding of our clients’ objectives. At Irfan & Irfan we strive to provide practical strategic and effective legal solutions across complex matters. Every case presents its own challenges and our responsibility is to navigate them with diligence discretion and professional integrity. We remain committed to delivering counsel that protects our clients’ interests and supports their long-term goals.",
   },
   {
-    number: "02",
     name: "Barrister Maria Farrukh Khan",
     role: "Partner — Advocate Supreme Court",
     image: "/lawyers/maria-farrukh-khan.webp",
     profile: "/team/maria-farrukh-khan",
     message:
-      "The practice of law demands more than technical expertise; it requires listening, understanding, and responding with clarity and purpose. At Irfan & Irfan, we place strong emphasis on client confidence, professional ethics, and meticulous attention to every matter entrusted to us. Our goal is to combine contemporary legal thinking with established principles of advocacy, providing clients with thoughtful representation and dependable guidance in an increasingly complex legal environment.",
+      "The practice of law demands more than technical expertise. It requires listening understanding and responding with clarity and purpose. At Irfan & Irfan we place strong emphasis on client confidence professional ethics and meticulous attention to every matter entrusted to us. Our goal is to combine contemporary legal thinking with established principles of advocacy while providing clients with thoughtful representation and dependable guidance in an increasingly complex legal environment.",
   },
 ];
 
@@ -96,10 +94,7 @@ export default function TeamPreviewSection() {
         lg:py-32
       "
     >
-      {/* =====================================================
-          DECORATIVE BACKGROUND TEXT
-      ====================================================== */}
-
+      {/* Decorative Background Text */}
       <div
         aria-hidden="true"
         className="
@@ -112,7 +107,6 @@ export default function TeamPreviewSection() {
           text-[100px]
           leading-none
           text-[#9d352d]/[0.035]
-
           sm:text-[145px]
           lg:text-[215px]
         "
@@ -131,25 +125,16 @@ export default function TeamPreviewSection() {
             mb-14
             grid
             gap-8
-            border-b
-            border-[#32110f]/15
-            pb-10
-
             md:mb-16
-
             lg:grid-cols-[1fr_0.8fr]
             lg:items-end
           "
         >
           {/* Left */}
-
           <div>
             <div
               className="
                 mb-5
-                flex
-                items-center
-                gap-4
                 text-[11px]
                 font-semibold
                 uppercase
@@ -157,9 +142,6 @@ export default function TeamPreviewSection() {
                 text-[#9d352d]
               "
             >
-              <span className="h-px w-10 bg-[#d4af4c]" />
-
-              <span>Our Partners</span>
             </div>
 
             <h2
@@ -171,7 +153,6 @@ export default function TeamPreviewSection() {
                 leading-[1.07]
                 tracking-[-0.025em]
                 text-[#32110f]
-
                 sm:text-[50px]
                 md:text-[58px]
                 lg:text-[68px]
@@ -180,28 +161,27 @@ export default function TeamPreviewSection() {
               Leadership Through
 
               <span className="block text-[#9d352d]">
-                Experience &amp; Integrity.
+                Experience and Integrity.
               </span>
             </h2>
           </div>
 
           {/* Right */}
-
-          <p
+          {/* <p
             className="
               max-w-[520px]
-              text-[14px]
-              leading-[1.9]
+              text-[15px]
+              leading-[1.85]
               text-[#604b45]
-
               lg:ml-auto
               lg:pb-1
+              md:text-[16px]
             "
           >
-            Our partners bring extensive legal experience, strategic insight
-            and a shared commitment to providing thoughtful, dependable and
+            Our partners bring extensive legal experience strategic insight
+            and a shared commitment to providing thoughtful dependable and
             client-focused legal counsel.
-          </p>
+          </p> */}
         </div>
 
         {/* =====================================================
@@ -214,16 +194,14 @@ export default function TeamPreviewSection() {
             grid
             grid-cols-1
             gap-14
-
             lg:grid-cols-2
             lg:gap-10
-
             xl:gap-14
           "
         >
           {partners.map((partner) => (
             <article
-              key={partner.number}
+              key={partner.name}
               className="
                 group
                 relative
@@ -239,7 +217,6 @@ export default function TeamPreviewSection() {
                   aspect-[4/4.45]
                   overflow-hidden
                   bg-[#f3ece5]
-
                   sm:aspect-[4/4]
                   lg:aspect-[4/4.35]
                   xl:aspect-[4/4]
@@ -249,23 +226,18 @@ export default function TeamPreviewSection() {
                   src={partner.image}
                   alt={partner.name}
                   fill
-                  sizes="
-                    (max-width: 1024px) 100vw,
-                    50vw
-                  "
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="
                     object-cover
                     object-top
                     transition-transform
                     duration-700
                     ease-out
-
                     group-hover:scale-[1.025]
                   "
                 />
 
                 {/* Image Gradient */}
-
                 <div
                   className="
                     pointer-events-none
@@ -278,42 +250,12 @@ export default function TeamPreviewSection() {
                   "
                 />
 
-                {/* Number */}
-
-                <div
-                  className="
-                    absolute
-                    left-5
-                    top-5
-                    flex
-                    h-11
-                    w-11
-                    items-center
-                    justify-center
-                    border
-                    border-white/20
-                    bg-[#32110f]/70
-                    text-[10px]
-                    font-semibold
-                    tracking-[0.16em]
-                    text-white
-                    backdrop-blur-sm
-
-                    sm:left-6
-                    sm:top-6
-                  "
-                >
-                  {partner.number}
-                </div>
-
                 {/* Partner Badge */}
-
                 <div
                   className="
                     absolute
                     bottom-5
                     left-5
-
                     sm:bottom-6
                     sm:left-6
                   "
@@ -332,39 +274,15 @@ export default function TeamPreviewSection() {
                       backdrop-blur-sm
                     "
                   >
-                    Partner
                   </span>
                 </div>
-
-                {/* Hover Gold Line */}
-
-                <div
-                  className="
-                    absolute
-                    bottom-0
-                    left-0
-                    h-[4px]
-                    w-0
-                    bg-[#d4af4c]
-                    transition-all
-                    duration-500
-
-                    group-hover:w-full
-                  "
-                />
               </div>
 
               {/* =============================================
                   NAME / ROLE
               ============================================== */}
 
-              <div
-                className="
-                  border-b
-                  border-[#32110f]/15
-                  py-7
-                "
-              >
+              <div className="py-7">
                 <p
                   className="
                     mb-2
@@ -373,7 +291,6 @@ export default function TeamPreviewSection() {
                     uppercase
                     tracking-[0.2em]
                     text-[#9d352d]
-
                     sm:text-[10px]
                   "
                 >
@@ -385,25 +302,23 @@ export default function TeamPreviewSection() {
                     flex
                     items-start
                     justify-between
-                    gap-3
+                    gap-4
                   "
                 >
                   <h3
-  className="
-    flex-1
-    whitespace-nowrap
-    font-display
-    text-[24px]
-    leading-[1.1]
-    text-[#32110f]
-
-    sm:text-[28px]
-    lg:text-[29px]
-    xl:text-[31px]
-  "
->
-  {partner.name}
-</h3>
+                    className="
+                      flex-1
+                      font-display
+                      text-[24px]
+                      leading-[1.1]
+                      text-[#32110f]
+                      sm:text-[28px]
+                      lg:text-[29px]
+                      xl:text-[31px]
+                    "
+                  >
+                    {partner.name}
+                  </h3>
 
                   <Link
                     href={partner.profile}
@@ -420,7 +335,6 @@ export default function TeamPreviewSection() {
                       text-[#9d352d]
                       transition-all
                       duration-300
-
                       hover:border-[#9d352d]
                       hover:bg-[#9d352d]
                       hover:text-white
@@ -438,43 +352,20 @@ export default function TeamPreviewSection() {
                   PARTNER MESSAGE
               ============================================== */}
 
-              <div className="relative pt-7">
-                {/* Quote Icon */}
-
-                <Quote
-                  size={25}
-                  strokeWidth={1.2}
-                  className="
-                    mb-5
-                    text-[#d4af4c]
-                  "
-                />
-
+              <div className="relative pt-1">
                 <p
-                  className="
-                    text-[14px]
-                    font-light
-                    leading-[1.95]
-                    text-[#604b45]
+  className="
+    text-[14px]
+    font-light
+    leading-[1.8]
+    text-[#604b45]
+    sm:text-[16px]
+  "
+>
+  {partner.message}
+</p>
 
-                    sm:text-[15px]
-                  "
-                >
-                  {partner.message}
-                </p>
-
-                {/* Message Footer */}
-
-                <div
-                  className="
-                    mt-7
-                    flex
-                    items-center
-                    gap-4
-                  "
-                >
-                  <span className="h-px w-10 bg-[#d4af4c]" />
-
+                <div className="mt-6">
                   <span
                     className="
                       text-[9px]
@@ -484,7 +375,6 @@ export default function TeamPreviewSection() {
                       text-[#79665e]
                     "
                   >
-                    Message from Partner
                   </span>
                 </div>
               </div>
@@ -502,10 +392,6 @@ export default function TeamPreviewSection() {
             flex
             flex-col
             gap-5
-            border-t
-            border-[#32110f]/15
-            pt-8
-
             sm:flex-row
             sm:items-center
             sm:justify-between
@@ -519,7 +405,6 @@ export default function TeamPreviewSection() {
               text-[#79665e]
             "
           >
-            Leadership • Experience • Professional Integrity
           </p>
 
           <Link
@@ -549,7 +434,6 @@ export default function TeamPreviewSection() {
                 border-[#9d352d]/30
                 transition-all
                 duration-300
-
                 group-hover:border-[#9d352d]
                 group-hover:bg-[#9d352d]
               "
@@ -560,7 +444,6 @@ export default function TeamPreviewSection() {
                 className="
                   transition-all
                   duration-300
-
                   group-hover:-translate-y-0.5
                   group-hover:translate-x-0.5
                   group-hover:text-white
@@ -570,21 +453,6 @@ export default function TeamPreviewSection() {
           </Link>
         </div>
       </div>
-
-      {/* =====================================================
-          BOTTOM GOLD DETAIL
-      ====================================================== */}
-
-      <div
-        className="
-          absolute
-          bottom-0
-          left-0
-          h-[2px]
-          w-[18%]
-          bg-[#d4af4c]
-        "
-      />
     </section>
   );
 }

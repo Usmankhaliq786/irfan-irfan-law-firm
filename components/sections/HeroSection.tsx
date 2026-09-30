@@ -85,7 +85,7 @@ export default function HeroSection() {
           poster="/images/hero-law.jpg"
         >
           <source
-            src="/videos/hero-video.mp4"
+            src="/videos/Hero-video1.mp4"
             type="video/mp4"
           />
 
@@ -179,7 +179,7 @@ export default function HeroSection() {
                 md:text-[34px]
               "
             >
-              “
+              
             </div>
 
             {/* Quote Text */}

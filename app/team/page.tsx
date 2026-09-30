@@ -4,13 +4,6 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  ArrowUpRight,
-  Scale,
-  UserRound,
-  CalendarDays,
-  Languages,
-} from "lucide-react";
 import { attorneys } from "@/data/attorneys";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -47,9 +40,11 @@ export default function TeamPage() {
 
   return (
     <div ref={pageRef} className="page-transition">
+
       {/* =====================================================
           HERO
       ====================================================== */}
+
       <section
         className="
           relative
@@ -63,6 +58,7 @@ export default function TeamPage() {
         "
       >
         {/* Background Word */}
+
         <div
           aria-hidden="true"
           className="
@@ -83,27 +79,8 @@ export default function TeamPage() {
           PEOPLE
         </div>
 
-        {/* Decorative circle */}
-        <div
-          aria-hidden="true"
-          className="
-            pointer-events-none
-            absolute
-            -bottom-[180px]
-            -left-[150px]
-            h-[420px]
-            w-[420px]
-            rounded-full
-            border
-            border-[#d4af4c]/15
-            sm:-bottom-[220px]
-            sm:-left-[180px]
-            sm:h-[520px]
-            sm:w-[520px]
-          "
-        />
+        {/* Soft Highlight */}
 
-        {/* Soft highlight */}
         <div
           aria-hidden="true"
           className="
@@ -121,24 +98,13 @@ export default function TeamPage() {
 
         <div className="page-container relative z-10">
           <div className="team-reveal max-w-[900px]">
-            <div className="mb-6 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#d4af4c]">
-              <span className="h-px w-10 bg-[#d4af4c]" />
-              Irfan &amp; Irfan
-            </div>
-
             <h1 className="font-display text-[48px] font-normal leading-[1.04] tracking-[-0.03em] text-white sm:text-[58px] md:text-[70px] lg:text-[82px]">
               Our
+
               <span className="block text-[#d4af4c]">
                 Lawyers.
               </span>
             </h1>
-
-            <p className="mt-8 max-w-[700px] text-[14px] leading-[1.9] text-white/80 md:text-[16px]">
-              Meet the lawyers of Irfan &amp; Irfan Attorneys at Law,
-              bringing experience across corporate, commercial,
-              regulatory, litigation, intellectual property and other
-              areas of legal practice.
-            </p>
           </div>
         </div>
       </section>
@@ -146,17 +112,15 @@ export default function TeamPage() {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
+
       <section className="bg-[#f8f4ed] py-16 md:py-20 lg:py-24">
         <div className="page-container">
           <div className="team-reveal grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-20">
-            <div>
-              <div className="mb-5 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#9d352d]">
-                <span className="h-px w-9 bg-[#d4af4c]" />
-                Our Professionals
-              </div>
 
+            <div>
               <h2 className="font-display text-[39px] leading-[1.08] tracking-[-0.02em] text-[#32110f] sm:text-[48px] lg:text-[58px]">
                 Experience Across
+
                 <span className="block text-[#9d352d]">
                   Legal Disciplines.
                 </span>
@@ -165,22 +129,14 @@ export default function TeamPage() {
 
             <div>
               <p className="max-w-[650px] text-[14px] leading-[1.95] text-[#604b45]">
-                Our lawyers work across a broad range of legal
-                disciplines and bring together experience in advisory,
-                transactional, regulatory and dispute-related matters.
+                Our lawyers work across a broad range of legal disciplines and
+                bring together experience in advisory transactional regulatory
+                and dispute-related matters.
               </p>
 
-              <div className="mt-8 flex items-center gap-4 border-l-2 border-[#d4af4c] pl-5">
-                <Scale
-                  size={22}
-                  strokeWidth={1.3}
-                  className="flex-shrink-0 text-[#9d352d]"
-                />
-
-                <p className="font-display text-[17px] leading-[1.55] text-[#32110f]">
-                  Professional experience. Client-focused legal counsel.
-                </p>
-              </div>
+              <p className="mt-7 font-display text-[17px] leading-[1.55] text-[#32110f]">
+                Professional experience. Client-focused legal counsel.
+              </p>
             </div>
           </div>
         </div>
@@ -189,32 +145,14 @@ export default function TeamPage() {
       {/* =====================================================
           LAWYERS
       ====================================================== */}
+
       <section className="bg-[#fffdf9] py-20 md:py-28 lg:py-32">
         <div className="page-container">
-          {/* Heading */}
-          <div className="team-reveal mb-14 flex flex-col gap-7 md:mb-20 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9d352d]">
-                The Team
-              </p>
-
-              <h2 className="max-w-[700px] font-display text-[40px] leading-[1.08] text-[#32110f] sm:text-[48px] lg:text-[58px]">
-                Meet Our
-                <span className="block text-[#9d352d]">
-                  Lawyers.
-                </span>
-              </h2>
-            </div>
-
-            <p className="max-w-[430px] text-[13px] leading-[1.9] text-[#79665e]">
-              Explore our lawyers and their principal areas of legal
-              practice.
-            </p>
-          </div>
 
           {/* =================================================
               LAWYERS GRID
           ================================================== */}
+
           <div
             className="
               grid
@@ -235,295 +173,242 @@ export default function TeamPage() {
                   href={`/team/${attorney.id}`}
                   className="block"
                 >
+
                   {/* =========================================
-    LAWYER IMAGE
-========================================== */}
-<div
-  className="
-    relative
-    aspect-[4/5]
-    overflow-hidden
-    bg-[#eee8df]
-  "
->
-  {attorney.image ? (
-    <img
-      src={attorney.image}
-      alt={attorney.name}
-      className="
-        h-full
-        w-full
-        object-cover
-        object-top
-        transition-transform
-        duration-500
-        ease-out
-        group-hover:scale-[1.025]
-      "
-    />
-  ) : (
-    <div
-      className="
-        flex
-        h-full
-        w-full
-        items-center
-        justify-center
-        bg-gradient-to-br
-        from-[#eee8df]
-        to-[#ded4c8]
-      "
-    >
-      <UserRound
-        size={88}
-        strokeWidth={0.8}
-        className="text-[#9d352d]/45"
-      />
-    </div>
-  )}
+                      LAWYER IMAGE
+                  ========================================== */}
 
-  {/* Normal image shadow */}
-  <div
-    className="
-      pointer-events-none
-      absolute
-      inset-x-0
-      bottom-0
-      h-[40%]
-      bg-gradient-to-t
-      from-[#32110f]/45
-      via-[#32110f]/10
-      to-transparent
-      transition-opacity
-      duration-500
-      group-hover:opacity-0
-    "
-  />
+                  <div
+                    className="
+                      relative
+                      aspect-[4/5]
+                      overflow-hidden
+                      bg-[#eee8df]
+                    "
+                  >
+                    {attorney.image ? (
+                      <img
+                        src={attorney.image}
+                        alt={attorney.name}
+                        className="
+                          h-full
+                          w-full
+                          object-cover
+                          object-top
+                          transition-transform
+                          duration-500
+                          ease-out
+                          group-hover:scale-[1.025]
+                        "
+                      />
+                    ) : (
+                      <div
+                        className="
+                          flex
+                          h-full
+                          w-full
+                          items-center
+                          justify-center
+                          bg-gradient-to-br
+                          from-[#eee8df]
+                          to-[#ded4c8]
+                        "
+                      >
+                        <span
+                          className="
+                            font-display
+                            text-[72px]
+                            font-normal
+                            text-[#9d352d]/45
+                          "
+                        >
+                          {attorney.name.charAt(0)}
+                        </span>
+                      </div>
+                    )}
 
-  {/* =========================================
-      DESKTOP HOVER
-  ========================================== */}
-  <div
-    className="
-      absolute
-      inset-0
-      z-20
-      hidden
-      flex-col
-      justify-end
-      opacity-0
-      transition-opacity
-      duration-400
-      group-hover:opacity-100
-      lg:flex
-    "
-  >
-    {/* 
-        IMPORTANT:
-        Light transparent overlay.
-        Image remains visible underneath.
-    */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        inset-0
-        bg-[#32110f]/60
-      "
-    />
+                    {/* Normal Image Shadow */}
 
-    {/* 
-        Stronger shadow only at bottom.
-        This keeps face/image visible at top.
-    */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        inset-x-0
-        bottom-0
-        h-[78%]
-        bg-gradient-to-t
-        from-[#32110f]/90
-        via-[#74241f]/58
-        to-transparent
-      "
-    />
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        inset-x-0
+                        bottom-0
+                        h-[40%]
+                        bg-gradient-to-t
+                        from-[#32110f]/45
+                        via-[#32110f]/10
+                        to-transparent
+                        transition-opacity
+                        duration-500
+                        group-hover:opacity-0
+                      "
+                    />
 
-    {/* Very subtle burgundy tint */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        inset-0
-        bg-[#9d352d]/10
-      "
-    />
+                    {/* =========================================
+                        DESKTOP HOVER
+                    ========================================== */}
 
-    {/* =====================================
-        CONTENT
-    ====================================== */}
-    <div
-      className="
-        relative
-        z-10
-        p-5
-        xl:p-6
-      "
-    >
-      {/* Expertise Heading */}
-      <div className="mb-3 flex items-center gap-3">
-        <span className="h-px w-7 shrink-0 bg-[#d4af4c]" />
+                    <div
+                      className="
+                        absolute
+                        inset-0
+                        z-20
+                        hidden
+                        flex-col
+                        justify-end
+                        opacity-0
+                        transition-opacity
+                        duration-500
+                        group-hover:opacity-100
+                        lg:flex
+                      "
+                    >
+                      {/* Light transparent overlay */}
 
-        <p
-          className="
-            whitespace-nowrap
-            text-[9px]
-            font-semibold
-            uppercase
-            tracking-[0.18em]
-            text-[#d4af4c]
-          "
-        >
-          Expertise
-        </p>
-      </div>
+                      <div
+                        className="
+                          pointer-events-none
+                          absolute
+                          inset-0
+                          bg-[#32110f]/60
+                        "
+                      />
 
-      {/* Maximum 6 Expertise */}
-      {attorney.specialization.length > 0 ? (
-        <div className="space-y-[5px]">
-          {attorney.specialization
-            .slice(0, 6)
-            .map((item, itemIndex) => (
-              <div
-                key={`${attorney.id}-${itemIndex}`}
-                className="
-                  flex
-                  min-w-0
-                  items-start
-                  gap-2.5
-                  border-b
-                  border-white/15
-                  pb-[5px]
-                "
-              >
-                {/* Gold bullet */}
-                <span
-                  className="
-                    mt-[5px]
-                    h-[4px]
-                    w-[4px]
-                    shrink-0
-                    bg-[#d4af4c]
-                  "
-                />
+                      {/* Stronger bottom shadow */}
 
-                {/* Expertise */}
-                <span
-                  title={item}
-                  className="
-                    line-clamp-1
-                    min-w-0
-                    text-[10px]
-                    font-medium
-                    leading-[1.4]
-                    text-white
-                    xl:text-[11px]
-                  "
-                >
-                  {item}
-                </span>
-              </div>
-            ))}
-        </div>
-      ) : (
-        <p className="text-[11px] leading-[1.6] text-white/80">
-          Professional profile available.
-        </p>
-      )}
+                      <div
+                        className="
+                          pointer-events-none
+                          absolute
+                          inset-x-0
+                          bottom-0
+                          h-[78%]
+                          bg-gradient-to-t
+                          from-[#32110f]/90
+                          via-[#74241f]/58
+                          to-transparent
+                        "
+                      />
 
-      {/* =====================================
-          READ MORE
-      ====================================== */}
-      <div
-        className="
-          mt-4
-          flex
-          items-center
-          justify-between
-          border-t
-          border-[#d4af4c]/40
-          pt-3
-        "
-      >
-        <div>
-          <span
-            className="
-              block
-              text-[9px]
-              font-semibold
-              uppercase
-              tracking-[0.16em]
-              text-[#d4af4c]
-            "
-          >
-            Read More
-          </span>
+                      {/* Subtle burgundy tint */}
 
-          {attorney.specialization.length > 6 && (
-            <span
-              className="
-                mt-1
-                block
-                text-[8px]
-                font-medium
-                tracking-[0.05em]
-                text-white/70
-              "
-            >
-              +{attorney.specialization.length - 6} more areas
-            </span>
-          )}
-        </div>
+                      <div
+                        className="
+                          pointer-events-none
+                          absolute
+                          inset-0
+                          bg-[#9d352d]/10
+                        "
+                      />
 
-        {/* Arrow */}
-        <div
-          className="
-            flex
-            h-9
-            w-9
-            shrink-0
-            items-center
-            justify-center
-            bg-[#d4af4c]
-            transition-transform
-            duration-300
-            group-hover:-translate-y-0.5
-            group-hover:translate-x-0.5
-          "
-        >
-          <ArrowUpRight
-            size={15}
-            strokeWidth={1.7}
-            className="text-[#32110f]"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                      {/* =====================================
+                          CONTENT
+                      ====================================== */}
+
+                      <div
+                        className="
+                          relative
+                          z-10
+                          p-5
+                          xl:p-6
+                        "
+                      >
+                        {/* Expertise Heading */}
+
+                        <p
+                          className="
+                            mb-3
+                            text-[9px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.18em]
+                            text-[#d4af4c]
+                          "
+                        >
+                          Expertise
+                        </p>
+
+                        {/* Maximum 6 Expertise */}
+
+                        {attorney.specialization.length > 0 ? (
+                          <div className="space-y-2">
+                            {attorney.specialization
+                              .slice(0, 6)
+                              .map((item, itemIndex) => (
+                                <div
+                                  key={`${attorney.id}-${itemIndex}`}
+                                  className="min-w-0"
+                                >
+                                  <span
+                                    title={item}
+                                    className="
+                                      line-clamp-1
+                                      min-w-0
+                                      text-[10px]
+                                      font-medium
+                                      leading-[1.4]
+                                      text-white
+                                      xl:text-[11px]
+                                    "
+                                  >
+                                    {item}
+                                  </span>
+                                </div>
+                              ))}
+                          </div>
+                        ) : (
+                          <p className="text-[11px] leading-[1.6] text-white/80">
+                            Professional profile available.
+                          </p>
+                        )}
+
+                        {/* =====================================
+                            READ MORE
+                        ====================================== */}
+
+                        <div className="mt-5">
+                          <span
+                            className="
+                              block
+                              text-[9px]
+                              font-semibold
+                              uppercase
+                              tracking-[0.16em]
+                              text-[#d4af4c]
+                            "
+                          >
+                            Read More
+                          </span>
+
+                          {attorney.specialization.length > 6 && (
+                            <span
+                              className="
+                                mt-1
+                                block
+                                text-[8px]
+                                font-medium
+                                tracking-[0.05em]
+                                text-white/70
+                              "
+                            >
+                              Additional areas of expertise
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* =========================================
                       LAWYER INFORMATION
                   ========================================== */}
-                  <div
-                    className="
-                      border-b
-                      border-[#32110f]/15
-                      pb-7
-                      pt-6
-                    "
-                  >
+
+                  <div className="pb-7 pt-6">
+
                     {/* Name */}
+
                     <h3
                       className="
                         font-display
@@ -540,6 +425,7 @@ export default function TeamPage() {
                     </h3>
 
                     {/* Role */}
+
                     {attorney.role && (
                       <p
                         className="
@@ -556,29 +442,18 @@ export default function TeamPage() {
                     )}
 
                     {/* Admission + Languages */}
+
                     <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                       {attorney.admissionYear && (
-                        <span className="flex items-center gap-2 text-[10px] text-[#604b45]">
-                          <CalendarDays
-                            size={13}
-                            className="text-[#d4af4c]"
-                          />
-
+                        <span className="text-[10px] text-[#604b45]">
                           Bar {attorney.admissionYear}
                         </span>
                       )}
 
                       {attorney.languages &&
                         attorney.languages.length > 0 && (
-                          <span className="flex items-center gap-2 text-[10px] text-[#604b45]">
-                            <Languages
-                              size={13}
-                              className="text-[#d4af4c]"
-                            />
-
-                            {attorney.languages
-                              .slice(0, 2)
-                              .join(", ")}
+                          <span className="text-[10px] text-[#604b45]">
+                            {attorney.languages.slice(0, 2).join(", ")}
                           </span>
                         )}
                     </div>
@@ -586,24 +461,20 @@ export default function TeamPage() {
                     {/* =========================================
                         MOBILE / TABLET EXPERTISE
                     ========================================== */}
+
                     {attorney.specialization.length > 0 && (
                       <div className="mt-5 lg:hidden">
                         <p className="mb-3 text-[8px] font-semibold uppercase tracking-[0.18em] text-[#9d352d]">
                           Expertise
                         </p>
 
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-x-4 gap-y-2">
                           {attorney.specialization
                             .slice(0, 3)
                             .map((item, itemIndex) => (
                               <span
                                 key={`${attorney.id}-mobile-${itemIndex}`}
                                 className="
-                                  border
-                                  border-[#9d352d]/15
-                                  bg-[#f8f4ed]
-                                  px-3
-                                  py-2
                                   text-[9px]
                                   leading-[1.4]
                                   text-[#604b45]
@@ -616,38 +487,29 @@ export default function TeamPage() {
 
                         {attorney.specialization.length > 3 && (
                           <p className="mt-3 text-[8px] font-medium uppercase tracking-[0.12em] text-[#79665e]">
-                            + {attorney.specialization.length - 3} more areas
+                            Additional areas of expertise
                           </p>
                         )}
                       </div>
                     )}
 
                     {/* View Profile */}
+
                     <span
                       className="
                         mt-6
                         inline-flex
-                        items-center
-                        gap-2
                         text-[9px]
                         font-semibold
                         uppercase
                         tracking-[0.17em]
                         text-[#9d352d]
+                        transition-colors
+                        duration-300
+                        group-hover:text-[#32110f]
                       "
                     >
                       View Profile
-
-                      <ArrowUpRight
-                        size={14}
-                        className="
-                          text-[#d4af4c]
-                          transition-transform
-                          duration-300
-                          group-hover:-translate-y-0.5
-                          group-hover:translate-x-0.5
-                        "
-                      />
                     </span>
                   </div>
                 </Link>
@@ -660,6 +522,7 @@ export default function TeamPage() {
       {/* =====================================================
           CONTACT CTA
       ====================================================== */}
+
       <section className="bg-[#f8f4ed] py-20 md:py-24 lg:py-28">
         <div className="page-container">
           <div
@@ -682,22 +545,20 @@ export default function TeamPage() {
               </h2>
 
               <p className="mt-5 max-w-[600px] text-[13px] leading-[1.85] text-white/75">
-                Contact Irfan &amp; Irfan to discuss your legal
-                requirements with our team.
+                Contact Irfan &amp; Irfan to discuss your legal requirements
+                with our team.
               </p>
             </div>
 
-            <div className="border-t border-white/15 p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <div className="p-8 sm:p-10 lg:p-12">
               <Link
                 href="/contact"
                 className="
-                  group
                   inline-flex
                   min-h-[58px]
                   w-full
                   items-center
-                  justify-between
-                  gap-8
+                  justify-center
                   bg-[#d4af4c]
                   px-7
                   text-[10px]
@@ -713,18 +574,6 @@ export default function TeamPage() {
                 "
               >
                 Contact Our Team
-
-                <ArrowUpRight
-                  size={18}
-                  strokeWidth={1.5}
-                  className="
-                    text-[#32110f]
-                    transition-transform
-                    duration-300
-                    group-hover:-translate-y-1
-                    group-hover:translate-x-1
-                  "
-                />
               </Link>
             </div>
           </div>

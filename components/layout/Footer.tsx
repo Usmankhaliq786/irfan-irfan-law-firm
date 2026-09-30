@@ -143,7 +143,7 @@ export default function Footer() {
               className="
                 mt-7
                 max-w-[450px]
-                text-[14px]
+                text-[18px]
                 leading-[1.9]
                 text-white/55
               "
@@ -153,7 +153,7 @@ export default function Footer() {
               regulatory and dispute-related matters in Pakistan.
             </p>
 
-            <div
+            {/* <div
               className="
                 mt-7
                 flex
@@ -168,12 +168,11 @@ export default function Footer() {
             >
               <span className="h-px w-8 bg-[#d4af4c]" />
 
-              Attorneys at Law
-            </div>
+            </div> */}
 
             {/* Social Icons */}
 
-            <div className="mt-8 flex items-center gap-3">
+            {/* <div className="mt-8 flex items-center gap-3">
               <a
                 href="#"
                 aria-label="Facebook"
@@ -219,7 +218,7 @@ export default function Footer() {
               >
                 <LinkedinIcon className="h-4 w-4" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* =================================================
@@ -230,7 +229,7 @@ export default function Footer() {
             <p
               className="
                 mb-7
-                text-[10px]
+                text-[14px]
                 font-semibold
                 uppercase
                 tracking-[0.22em]
@@ -250,8 +249,8 @@ export default function Footer() {
                       inline-flex
                       items-center
                       gap-2
-                      font-display
-                      text-[18px]
+                      font-semibold
+                      text-[14px]
                       text-white/75
                       transition-colors
                       duration-300
@@ -287,7 +286,7 @@ export default function Footer() {
             <p
               className="
                 mb-7
-                text-[10px]
+                text-[14px]
                 font-semibold
                 uppercase
                 tracking-[0.22em]
@@ -303,9 +302,13 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="
-                      text-[13px]
-                      leading-relaxed
-                      text-white/55
+                      group
+                      inline-flex
+                      items-center
+                      gap-2
+                      font-semibold
+                      text-[14px]
+                      text-white/75
                       transition-colors
                       duration-300
 
@@ -313,6 +316,19 @@ export default function Footer() {
                     "
                   >
                     {link.name}
+
+                    <ArrowUpRight
+                      size={13}
+                      className="
+                        opacity-0
+                        transition-all
+                        duration-300
+
+                        group-hover:-translate-y-0.5
+                        group-hover:translate-x-0.5
+                        group-hover:opacity-100
+                      "
+                    />
                   </Link>
                 </li>
               ))}

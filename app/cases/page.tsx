@@ -4,20 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  ArrowUpRight,
-  CalendarDays,
-  Newspaper,
-  Scale,
-  X,
-  ArrowRight,
-} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 type NewsItem = {
   id: string;
-  number: string;
   title: string;
   category: string;
   date: string;
@@ -27,7 +18,6 @@ type NewsItem = {
 const newsItems: NewsItem[] = [
   {
     id: "aml-compliance-framework",
-    number: "01",
     title: "New AML & Compliance Framework for Financial Institutions",
     category: "News",
     date: "September 2, 2025",
@@ -36,7 +26,6 @@ const newsItems: NewsItem[] = [
   },
   {
     id: "corporate-sector-rulings",
-    number: "02",
     title: "Supreme Court & High Court Rulings Impacting Corporate Sector",
     category: "News",
     date: "September 2, 2025",
@@ -45,7 +34,6 @@ const newsItems: NewsItem[] = [
   },
   {
     id: "ipo-pakistan-ip-regime",
-    number: "03",
     title: "IPO Pakistan’s Strengthened Intellectual Property Regime",
     category: "News",
     date: "September 2, 2025",
@@ -54,7 +42,6 @@ const newsItems: NewsItem[] = [
   },
   {
     id: "fbr-taxation-corporate-filing",
-    number: "04",
     title: "New Taxation and Corporate Filing Requirements under FBR",
     category: "News",
     date: "September 2, 2025",
@@ -63,7 +50,6 @@ const newsItems: NewsItem[] = [
   },
   {
     id: "secp-digital-transformation",
-    number: "05",
     title: "SECP’s Digital Transformation and Company Incorporation Reforms",
     category: "News",
     date: "September 2, 2025",
@@ -79,6 +65,7 @@ export default function NewsPage() {
   /* =====================================================
      GSAP
   ====================================================== */
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".news-reveal").forEach((element) => {
@@ -109,6 +96,7 @@ export default function NewsPage() {
   /* =====================================================
      MODAL SCROLL LOCK + ESC
   ====================================================== */
+
   useEffect(() => {
     if (!selectedNews) {
       document.body.style.overflow = "";
@@ -141,9 +129,11 @@ export default function NewsPage() {
 
   return (
     <div ref={pageRef} className="page-transition">
+
       {/* =====================================================
           HERO
       ====================================================== */}
+
       <section
         className="
           relative
@@ -157,6 +147,7 @@ export default function NewsPage() {
         "
       >
         {/* Background NEWS */}
+
         <div
           aria-hidden="true"
           className="
@@ -177,23 +168,8 @@ export default function NewsPage() {
           NEWS
         </div>
 
-        {/* Decorative Circle */}
-        <div
-          aria-hidden="true"
-          className="
-            pointer-events-none
-            absolute
-            -bottom-[220px]
-            -left-[180px]
-            h-[500px]
-            w-[500px]
-            rounded-full
-            border
-            border-[#d4af4c]/15
-          "
-        />
-
         {/* Glow */}
+
         <div
           aria-hidden="true"
           className="
@@ -211,13 +187,12 @@ export default function NewsPage() {
 
         <div className="page-container relative z-10">
           <div className="max-w-[900px]">
-            <div className="mb-6 flex items-center gap-4">
-              <span className="h-px w-10 bg-[#d4af4c]" />
 
+            {/* <div className="mb-6 flex items-center gap-4">
               <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#d4af4c]">
                 Irfan &amp; Irfan
               </span>
-            </div>
+            </div> */}
 
             <h1
               className="
@@ -232,13 +207,14 @@ export default function NewsPage() {
                 lg:text-[84px]
               "
             >
-              News &amp;
+              News and
+
               <span className="block text-[#d4af4c]">
                 Legal Updates.
               </span>
             </h1>
 
-            <p
+            {/* <p
               className="
                 mt-8
                 max-w-[700px]
@@ -250,7 +226,7 @@ export default function NewsPage() {
             >
               Stay informed with legal developments, regulatory updates and
               insights relevant to businesses, institutions and individuals.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -258,158 +234,16 @@ export default function NewsPage() {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
-      <section className="bg-[#f8f4ed] py-20 md:py-24 lg:py-28">
-        <div className="page-container">
-          <div
-            className="
-              news-reveal
-              grid
-              gap-10
-              lg:grid-cols-[0.75fr_1.25fr]
-              lg:gap-20
-            "
-          >
-            {/* Left */}
-            <div>
-              <div
-                className="
-                  mb-5
-                  flex
-                  items-center
-                  gap-4
-                  text-[10px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.22em]
-                  text-[#9d352d]
-                "
-              >
-                <Scale
-                  size={17}
-                  strokeWidth={1.4}
-                  className="text-[#d4af4c]"
-                />
-
-                Legal Knowledge
-              </div>
-
-              <h2
-                className="
-                  font-display
-                  text-[39px]
-                  leading-[1.08]
-                  tracking-[-0.02em]
-                  text-[#32110f]
-                  sm:text-[46px]
-                  lg:text-[55px]
-                "
-              >
-                Legal Insight.
-                <span className="block text-[#9d352d]">
-                  Global Perspective.
-                </span>
-              </h2>
-
-              <div className="mt-7 h-px w-16 bg-[#d4af4c]" />
-            </div>
-
-            {/* Right */}
-            <div className="lg:pt-8">
-              <p
-                className="
-                  max-w-[720px]
-                  text-[15px]
-                  leading-[2]
-                  text-[#604b45]
-                  md:text-[16px]
-                "
-              >
-                Our lawyers offer clients a range of integrated global
-                capabilities, including some of the world&apos;s most active
-                M&amp;A, real estate, financial services, litigation and
-                corporate risk practices.
-              </p>
-
-              <div
-                className="
-                  mt-9
-                  grid
-                  grid-cols-2
-                  border-l
-                  border-t
-                  border-[#32110f]/15
-                  sm:max-w-[460px]
-                "
-              >
-                <div className="border-b border-r border-[#32110f]/15 p-5">
-                  <span className="block font-display text-[30px] text-[#9d352d]">
-                    05
-                  </span>
-
-                  <span className="mt-1 block text-[8px] font-semibold uppercase tracking-[0.18em] text-[#79665e]">
-                    Latest Updates
-                  </span>
-                </div>
-
-                <div className="border-b border-r border-[#32110f]/15 p-5">
-                  <Newspaper
-                    size={27}
-                    strokeWidth={1.2}
-                    className="mb-2 text-[#9d352d]"
-                  />
-
-                  <span className="block text-[8px] font-semibold uppercase tracking-[0.18em] text-[#79665e]">
-                    Legal News
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* =====================================================
           NEWS CARDS
       ====================================================== */}
+
       <section className="bg-[#fffdf9] py-20 md:py-24 lg:py-28">
         <div className="page-container">
-          {/* Heading */}
-          <div
-            className="
-              news-reveal
-              mb-12
-              flex
-              flex-col
-              justify-between
-              gap-6
-              border-b
-              border-[#32110f]/15
-              pb-8
-              md:mb-16
-              md:flex-row
-              md:items-end
-            "
-          >
-            <div>
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9d352d]">
-                News &amp; Insights
-              </p>
-
-              <h2 className="font-display text-[40px] leading-[1.08] text-[#32110f] sm:text-[48px] lg:text-[58px]">
-                Latest{" "}
-                <span className="text-[#9d352d]">
-                  Updates.
-                </span>
-              </h2>
-            </div>
-
-            <p className="max-w-[420px] text-[12px] leading-[1.8] text-[#79665e]">
-              Legal and regulatory developments covering corporate,
-              financial, intellectual property and compliance matters.
-            </p>
-          </div>
 
           {/* Cards Grid */}
+
           <div
             className="
               grid
@@ -430,81 +264,30 @@ export default function NewsPage() {
                   min-h-[390px]
                   flex-col
                   overflow-hidden
-                  border
-                  border-[#32110f]/12
                   bg-[#f8f4ed]
                   p-7
                   transition-all
                   duration-500
                   hover:-translate-y-1
-                  hover:border-[#9d352d]/30
                   hover:bg-white
                   hover:shadow-[0_22px_60px_rgba(50,17,15,0.10)]
                   sm:p-8
                 "
               >
-                {/* Hover Top Line */}
-                <div
-                  className="
-                    absolute
-                    left-0
-                    top-0
-                    h-[3px]
-                    w-0
-                    bg-[#9d352d]
-                    transition-all
-                    duration-500
-                    group-hover:w-full
-                  "
-                />
-
-                {/* Number + icon */}
-                <div className="mb-10 flex items-start justify-between">
-                  <span className="font-display text-[36px] leading-none text-[#d4af4c]">
-                    {item.number}
-                  </span>
-
-                  <div
-                    className="
-                      flex
-                      h-11
-                      w-11
-                      items-center
-                      justify-center
-                      border
-                      border-[#9d352d]/15
-                      bg-[#fffdf9]
-                      transition-colors
-                      duration-300
-                      group-hover:bg-[#9d352d]
-                    "
-                  >
-                    <Newspaper
-                      size={18}
-                      strokeWidth={1.4}
-                      className="
-                        text-[#9d352d]
-                        transition-colors
-                        duration-300
-                        group-hover:text-[#d4af4c]
-                      "
-                    />
-                  </div>
-                </div>
-
                 {/* Meta */}
+
                 <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2">
                   <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#9d352d]">
                     {item.category}
                   </span>
 
-                  <span className="flex items-center gap-2 text-[9px] uppercase tracking-[0.1em] text-[#79665e]">
-                    <CalendarDays size={12} strokeWidth={1.4} />
+                  <span className="text-[9px] uppercase tracking-[0.1em] text-[#79665e]">
                     {item.date}
                   </span>
                 </div>
 
                 {/* Title */}
+
                 <h3
                   className="
                     font-display
@@ -520,57 +303,33 @@ export default function NewsPage() {
                   {item.title}
                 </h3>
 
-                {/* Short text */}
+                {/* Short Text */}
+
                 <p className="mt-5 line-clamp-3 text-[12px] leading-[1.8] text-[#79665e]">
                   {item.excerpt}
                 </p>
 
                 {/* Read More */}
+
                 <button
                   type="button"
                   onClick={() => openNews(item)}
                   className="
                     mt-auto
-                    flex
-                    w-full
-                    items-center
-                    justify-between
-                    border-t
-                    border-[#32110f]/12
+                    w-fit
                     pt-6
                     text-left
+                    text-[9px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.18em]
+                    text-[#9d352d]
+                    transition-colors
+                    duration-300
+                    hover:text-[#32110f]
                   "
                 >
-                  <span className="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#9d352d]">
-                    Read More
-                  </span>
-
-                  <span
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      items-center
-                      justify-center
-                      bg-[#9d352d]
-                      transition-all
-                      duration-300
-                      group-hover:bg-[#d4af4c]
-                    "
-                  >
-                    <ArrowUpRight
-                      size={15}
-                      strokeWidth={1.6}
-                      className="
-                        text-white
-                        transition-all
-                        duration-300
-                        group-hover:-translate-y-0.5
-                        group-hover:translate-x-0.5
-                        group-hover:text-[#32110f]
-                      "
-                    />
-                  </span>
+                  Read More
                 </button>
               </article>
             ))}
@@ -581,61 +340,14 @@ export default function NewsPage() {
       {/* =====================================================
           INSIGHT STRIP
       ====================================================== */}
-      <section
-        className="
-          bg-[linear-gradient(135deg,#9d352d_0%,#8b2d27_50%,#74241f_100%)]
-          py-16
-          md:py-20
-        "
-      >
-        <div className="page-container">
-          <div
-            className="
-              news-reveal
-              grid
-              gap-8
-              md:grid-cols-[auto_1fr]
-              md:items-center
-              md:gap-12
-            "
-          >
-            <div
-              className="
-                flex
-                h-[70px]
-                w-[70px]
-                items-center
-                justify-center
-                border
-                border-[#d4af4c]/40
-              "
-            >
-              <Newspaper
-                size={28}
-                strokeWidth={1.2}
-                className="text-[#d4af4c]"
-              />
-            </div>
-
-            <div>
-              <p className="mb-3 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#d4af4c]">
-                Irfan &amp; Irfan Attorneys at Law
-              </p>
-
-              <p className="max-w-[900px] font-display text-[25px] leading-[1.45] text-white sm:text-[29px] md:text-[32px]">
-                Providing legal insight across evolving regulatory,
-                commercial and corporate landscapes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* =====================================================
           CTA
       ====================================================== */}
+
       <section className="bg-[#f8f4ed] py-20 md:py-24 lg:py-28">
         <div className="page-container">
+
           <div
             className="
               news-reveal
@@ -647,31 +359,21 @@ export default function NewsPage() {
             "
           >
             <div className="p-8 sm:p-10 md:p-12 lg:p-14">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#d4af4c]">
-                Need Legal Assistance?
-              </p>
 
               <h2 className="max-w-[720px] font-display text-[35px] leading-[1.12] text-white sm:text-[42px] lg:text-[49px]">
                 Discuss your legal requirements with our team.
               </h2>
-
-              <p className="mt-5 max-w-[620px] text-[13px] leading-[1.85] text-white/75">
-                Our lawyers advise clients across a broad range of legal,
-                commercial and regulatory matters.
-              </p>
             </div>
 
-            <div className="border-t border-white/15 p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <div className="p-8 sm:p-10 lg:p-12">
               <Link
                 href="/contact"
                 className="
-                  group
                   inline-flex
                   min-h-[58px]
                   min-w-[220px]
                   items-center
-                  justify-between
-                  gap-8
+                  justify-center
                   bg-[#d4af4c]
                   px-7
                   text-[10px]
@@ -685,18 +387,6 @@ export default function NewsPage() {
                 "
               >
                 Contact Our Team
-
-                <ArrowUpRight
-                  size={18}
-                  strokeWidth={1.5}
-                  className="
-                    text-[#32110f]
-                    transition-transform
-                    duration-300
-                    group-hover:-translate-y-1
-                    group-hover:translate-x-1
-                  "
-                />
               </Link>
             </div>
           </div>
@@ -706,6 +396,7 @@ export default function NewsPage() {
       {/* =====================================================
           NEWS POPUP
       ====================================================== */}
+
       {selectedNews && (
         <div
           className="
@@ -741,6 +432,7 @@ export default function NewsPage() {
             "
           >
             {/* Popup Top */}
+
             <div
               className="
                 sticky
@@ -749,66 +441,53 @@ export default function NewsPage() {
                 flex
                 items-center
                 justify-between
-                border-b
-                border-white/15
                 bg-[#9d352d]
                 px-5
                 py-4
                 sm:px-7
               "
             >
-              <div className="flex items-center gap-3">
-                <Newspaper
-                  size={17}
-                  strokeWidth={1.4}
-                  className="text-[#d4af4c]"
-                />
-
-                <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
-                  Legal Update
-                </span>
-              </div>
+              <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+                Legal Update
+              </span>
 
               <button
                 type="button"
                 onClick={closeNews}
                 aria-label="Close news"
                 className="
-                  flex
-                  h-10
-                  w-10
-                  items-center
-                  justify-center
-                  border
-                  border-white/20
+                  text-[9px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.18em]
                   text-white
                   transition-colors
-                  hover:border-[#d4af4c]
-                  hover:bg-[#d4af4c]
-                  hover:text-[#32110f]
+                  duration-300
+                  hover:text-[#d4af4c]
                 "
               >
-                <X size={18} strokeWidth={1.5} />
+                Close
               </button>
             </div>
 
             {/* Popup Content */}
+
             <div className="p-6 sm:p-9 md:p-11">
+
               {/* Meta */}
+
               <div className="mb-6 flex flex-wrap items-center gap-4">
                 <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#9d352d]">
                   {selectedNews.category}
                 </span>
 
-                <span className="h-1 w-1 rounded-full bg-[#d4af4c]" />
-
-                <span className="flex items-center gap-2 text-[9px] uppercase tracking-[0.1em] text-[#79665e]">
-                  <CalendarDays size={13} />
+                <span className="text-[9px] uppercase tracking-[0.1em] text-[#79665e]">
                   {selectedNews.date}
                 </span>
               </div>
 
               {/* Title */}
+
               <h2
                 id="news-modal-title"
                 className="
@@ -824,13 +503,13 @@ export default function NewsPage() {
                 {selectedNews.title}
               </h2>
 
-              <div className="my-7 h-px w-16 bg-[#d4af4c]" />
-
               {/* =============================================
                   FBR FULL ARTICLE
               ============================================== */}
+
               {selectedNews.id === "fbr-taxation-corporate-filing" ? (
-                <div className="space-y-6 text-[14px] leading-[1.95] text-[#604b45] sm:text-[15px]">
+                <div className="mt-8 space-y-6 text-[14px] leading-[1.95] text-[#604b45] sm:text-[15px]">
+
                   <p>
                     In recent months, the Federal Board of Revenue (FBR) has
                     issued multiple directives impacting corporate entities.
@@ -873,7 +552,8 @@ export default function NewsPage() {
                 </div>
               ) : (
                 /* Other news — until full articles are added */
-                <div>
+
+                <div className="mt-8">
                   <p className="text-[14px] leading-[1.95] text-[#604b45] sm:text-[15px]">
                     {selectedNews.excerpt}
                   </p>
@@ -881,8 +561,6 @@ export default function NewsPage() {
                   <div
                     className="
                       mt-8
-                      border-l-2
-                      border-[#d4af4c]
                       bg-[#f8f4ed]
                       px-5
                       py-4
@@ -897,14 +575,13 @@ export default function NewsPage() {
               )}
 
               {/* Popup Footer */}
+
               <div
                 className="
                   mt-10
                   flex
                   flex-col
                   gap-5
-                  border-t
-                  border-[#32110f]/12
                   pt-7
                   sm:flex-row
                   sm:items-center
@@ -919,23 +596,19 @@ export default function NewsPage() {
                   type="button"
                   onClick={closeNews}
                   className="
-                    group
                     inline-flex
                     items-center
-                    gap-3
                     text-[9px]
                     font-semibold
                     uppercase
                     tracking-[0.17em]
                     text-[#9d352d]
+                    transition-colors
+                    duration-300
+                    hover:text-[#32110f]
                   "
                 >
                   Close Article
-
-                  <ArrowRight
-                    size={14}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
                 </button>
               </div>
             </div>

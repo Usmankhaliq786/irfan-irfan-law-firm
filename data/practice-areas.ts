@@ -25,7 +25,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Arbitration",
 
     shortDescription:
-      "Representation in domestic and international commercial arbitration matters.",
+      "",
 
     fullDescription:
       "The firm has expertise and has handled commercial arbitration matters on behalf of its clients. Our services in this area include drafting arbitration clauses, preparation of arbitration references, conduct of arbitration proceedings with or without intervention of courts in Pakistan and abroad, making foreign and local arbitration awards as rule of court, preparing objections and enforcement of foreign and local arbitration awards. The firm’s lawyers possess the skills needed to handle international and local arbitration and litigation matters.",
@@ -55,7 +55,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Aviation",
 
     shortDescription:
-      "Legal advice on airline operations, aviation contracts, aircraft leasing and related disputes.",
+      "",
 
     fullDescription:
       "The firm advises on structuring and negotiating airline operation licenses and related contracts, aircraft lease contracts, contracts for appointment of general sales agents for both passenger and cargo operations, aircraft accident matters, claims for compensation and damages, and court litigation between airlines and their agents.",
@@ -87,7 +87,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Banking & Finance",
 
     shortDescription:
-      "Legal advice, documentation and representation for banks and financial institutions.",
+      "",
 
     fullDescription:
       "The firm conducts legal audits for banks to ensure that loans are properly secured in accordance with sanction advice or offer letters. The practice includes loan documentation for commercial banks, investment banks and non-banking financial institutions, syndicated finance agreements, financial derivatives, term finance certificates, housing finance, Islamic finance products including morabaha and musharika, lease agreements, hire purchase agreements and consumer finance agreements. The firm also represents financial institutions in the Banking and High Courts of the country and handles recovery proceedings and execution of decrees.",
@@ -121,7 +121,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Competition Law",
 
     shortDescription:
-      "Advice on competition regulation, anti-trust compliance, mergers and market practices.",
+      "",
 
     fullDescription:
       "The firm has been at the forefront of the emergence of competition law and anti-trust compliance, filings and litigation in Pakistan. The firm advises clients on avoiding acts, agreements and practices prohibited under competition law and also provides training to clients. The practice includes matters involving cartels, pre-merger filings, mergers, deceptive marketing practice complaints and related proceedings.",
@@ -162,7 +162,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Corporate & Business Law",
 
     shortDescription:
-      "Comprehensive advice on national and international business transactions and corporate matters.",
+      "",
 
     fullDescription:
       "The firm advises clients regarding national and international business transactions. Our lawyers counsel clients on issues including choice of corporate vehicle, structuring of constitutive documents, shareholding structures, sale and purchase of assets, government consents, income and sales tax structures, repatriation regimes and customs. We regularly advise foreign clients in establishing branches or local companies and act as their agents before various governmental departments. The firm also advises clients on legal issues arising in the running and operation of commercial enterprises.",
@@ -210,7 +210,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Cyber Law & E-Commerce",
 
     shortDescription:
-      "Legal counsel on electronic transactions, digital business, data protection and cyberspace matters.",
+      "",
 
     fullDescription:
       "Technology affects business practices and can therefore affect business law. Cyberspace, the internet and the World Wide Web represent technologies affecting commercial practices throughout the world. The firm advises clients regarding e-contracts, cyberspace agreements, electronic transactions, jurisdictional issues, website content, trademarks, data protection, copyright and other intellectual property issues in cyberspace. Members of the firm have also served on Government panels and committees constituted to make the country’s laws e-commerce friendly in the digital information age.",
@@ -250,7 +250,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Election Laws",
 
     shortDescription:
-      "Representation throughout electoral proceedings, from nominations to election litigation.",
+      "",
 
     fullDescription:
       "The firm has a dedicated team of lawyers with experience in matters relating to election laws, procedures and substantive issues arising during the election process. The firm represents clients throughout the various stages, including filing nomination papers, contesting objection petitions, appearing before the Election Commission of Pakistan, filing writ petitions in cases involving violations of law, and representing clients before Election Tribunals leading up to the Supreme Court of Pakistan.",
@@ -280,10 +280,10 @@ export const practiceAreas: PracticeArea[] = [
 
   {
     id: "energy",
-    title: "Energy (Oil, Gas & Electricity)",
+    title: "Energy (Oil, Gas and Electricity)",
 
     shortDescription:
-      "Legal advice for companies operating across the oil, gas and power sectors.",
+      "",
 
     fullDescription:
       "The firm offers legal advice to companies in the oil, gas and power sectors. Services are provided to local as well as foreign clients on a range of issues extending from privatization to legal aspects of corporate finance transactions. The firm also advises businesses engaged in marketing petroleum and other products on matters including licenses for marketing, storage and sale of petroleum products, contracts for setting up petrol stations and concessions for prospecting of oil and gas.",
@@ -316,7 +316,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Mining Laws",
 
     shortDescription:
-      "Advice on mining concessions, licensing regimes and commercial mining agreements.",
+      "",
 
     fullDescription:
       "The firm has advised and assisted clients in reviewing mining concession and licensing regimes existing in Pakistan, including relevant federal and provincial legislation. The firm advises clients on matters including obtaining mining licenses, concession agreements, joint operating agreements and implementation agreements.",
@@ -344,7 +344,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Patent & Design Law",
 
     shortDescription:
-      "Protection, prosecution and enforcement of patents, designs and technology rights.",
+      "",
 
     fullDescription:
       "Today’s fast-paced, high-tech environment demands that business owners pay special attention to obtaining and protecting rights to their patents and technology. The firm’s services include patent and design filing and prosecution, patent infringement litigation and counselling, opinions on patent validity, infringement, enforceability and right-to-practice, Patent Office interferences, examinations and oppositions, and disputes involving technologies including electronics, telecommunications, mechanical, biotechnology, pharmaceutical and chemical technologies.",
@@ -388,7 +388,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Privatization",
 
     shortDescription:
-      "Advice to local and foreign clients participating in privatization transactions in Pakistan.",
+      "",
 
     fullDescription:
       "The firm offers advice to local as well as foreign clients intending to participate in the privatization of state-owned oil, gas and telecommunication companies in Pakistan. The firm also counsels clients in conducting due diligence, obtaining governmental consents, arranging repatriation of funds, reviewing bidding documents, ensuring compliance with the applicable local legal regime and representing clients before the Privatization Commission.",
@@ -417,7 +417,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Real Estate",
 
     shortDescription:
-      "Legal assistance for commercial and residential property transactions and development matters.",
+      "",
 
     fullDescription:
       "The firm routinely advises clients regarding the sale and purchase of commercial and residential property and assists in negotiating, drafting, executing and registering documents required under the law. Our lawyers also verify title documents and claims to immovable property in order to protect clients from fraudulent sale agreements. The firm also advises clients on constituting and operating housing societies while taking into account relevant national and international regulatory regimes.",
@@ -448,7 +448,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Environmental & Regulatory Law",
 
     shortDescription:
-      "Advice on environmental standards, regulatory compliance and related proceedings.",
+      "",
 
     fullDescription:
       "The spectrum of the firm’s environmental law practice is continuously expanding. The firm provides legal counsel regarding environmental standards, compliance with the existing regulatory regime and representation before the Environmental Tribunal.",
@@ -478,7 +478,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "International Trade & Cross Border Operations",
 
     shortDescription:
-      "Legal advice for international business transactions and cross-border commercial operations.",
+      "",
 
     fullDescription:
       "The firm provides advice to local as well as foreign clients with respect to international business and cross-border operations, including international sales and internet contracts, agency, licensing, distribution and franchising agreements for products and services, evaluation of local trade and commercial regimes for transactions between local and foreign clients, and advice on tax-related issues in international transactions.",
@@ -512,7 +512,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Litigation & Enforcement",
 
     shortDescription:
-      "Strategic representation before courts, tribunals and dispute resolution forums across Pakistan.",
+      "",
 
     fullDescription:
       "The firm maintains an active litigation practice and has the resources and personnel to conduct litigation across Pakistan. Clients facing potential or actual litigation rely on the firm to develop strategies that are cost effective and efficient. Services include evaluating the risks, costs and benefits of commencing or defending litigation, exploring alternatives to litigation where appropriate, representing clients at all levels of the judicial hierarchy including Civil, Banking, High, Company and Supreme Courts, appearing before administrative tribunals and in arbitration and mediation proceedings, and handling disputes involving contracts, recovery matters, construction, real estate, intellectual property, constitutional petitions, taxation and administrative actions.",
@@ -550,7 +550,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Mergers, Acquisitions & Joint Ventures",
 
     shortDescription:
-      "Legal counsel for acquisitions, divestitures, mergers, joint ventures and corporate restructuring.",
+      "",
 
     fullDescription:
       "The firm advises clients in acquisitions or divestitures, mergers and joint ventures, assisting them in selecting business structures suited to their interests while taking into consideration pricing, tax, regulatory and liability issues. The firm also assists clients in reorganizing and restructuring individual and joint undertakings, preparing necessary documentation, handling sophisticated cross-border transactions, conducting due diligence investigations, assessing pending litigation, obtaining regulatory approvals, tax structuring and developing and negotiating purchase agreements.",
@@ -588,7 +588,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Tax Law",
 
     shortDescription:
-      "Tax advice relating to commercial transactions, investments and business structures.",
+      "",
 
     fullDescription:
       "Tax implications are an important aspect in structuring commercial transactions. The firm advises clients on tax issues relating to commercial transactions including joint ventures, share purchase agreements and the purchase of businesses as running concerns. Our lawyers also advise foreign clients regarding tax implications connected with their investments in the local market.",
@@ -616,7 +616,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Telecommunication",
 
     shortDescription:
-      "Legal and commercial advice for businesses operating in the telecommunications sector.",
+      "",
 
     fullDescription:
       "The firm offers advice to companies operating in the telecommunication sector. Its client base ranges from companies providing payphone services to companies operating wireless local loop networks. The firm has also been involved in documentation of financial instruments for raising capital for the telecommunication sector through equity and debt-based instruments.",
@@ -656,7 +656,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Trademark & Copyright",
 
     shortDescription:
-      "Protection, prosecution, management and enforcement of trademarks, copyright and brand rights.",
+      "",
 
     fullDescription:
       "Brand identification can be one of the most important factors in a company’s growth and market visibility. The firm assists clients from brand selection and adoption through securing, protecting and maintaining rights in trademarks, company names, logos, slogans, packaging and other intellectual property. Services include trademark availability advice, filing and prosecution of trademark and copyright applications, prosecution and defence of infringement actions, anti-counterfeiting actions before Customs, Police and courts, intellectual property audits, market surveys, due diligence investigations, licensing and assignment agreements, international trademark programs, domain name registrations and Internet-related infringement matters.",

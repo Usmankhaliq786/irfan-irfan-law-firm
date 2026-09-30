@@ -176,7 +176,7 @@ export default function MembersSection() {
         >
           {/* Left */}
           <div>
-            <div
+            {/* <div
               className="
                 mb-5
                 flex
@@ -190,8 +190,7 @@ export default function MembersSection() {
               "
             >
               <span className="h-px w-9 bg-[#d4af4c]" />
-              Professional Associations
-            </div>
+            </div> */}
 
             <h2
               className="
@@ -211,7 +210,7 @@ export default function MembersSection() {
 
           {/* Right */}
           <div className="flex flex-col gap-6 lg:items-end">
-            <p
+            {/* <p
               className="
                 max-w-[570px]
                 text-[13px]
@@ -223,7 +222,7 @@ export default function MembersSection() {
               Professional memberships and associations connected with
               the legal and commercial practice of Irfan &amp; Irfan
               Attorneys at Law.
-            </p>
+            </p> */}
 
             {/* Navigation */}
             <div className="flex items-center gap-3">
